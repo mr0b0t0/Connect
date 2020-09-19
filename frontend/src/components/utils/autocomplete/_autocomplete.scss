@@ -1,0 +1,25 @@
+.autocomplete{
+    width: 100%;
+    .listbox{
+        width: 200px;
+        margin: 0px;
+        padding: 0px;
+        z-index: 1;
+        position: absolute;
+        list-style: none;
+        background-color: $primary-color-dark;
+        color: $snow-color;
+        overflow: auto;
+        max-height: 200px;
+        li{
+            padding: 10px;
+        }
+        li[data-focus=true] {
+            color: $secondary-color;
+            cursor: pointer;
+        }
+        li:active {
+            color: $secondary-color;
+        }
+    }
+}

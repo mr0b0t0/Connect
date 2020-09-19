@@ -1,0 +1,74 @@
+.message {
+  display: flex;
+  flex-direction: column;
+}
+
+.message .timestamp {
+  display: flex;
+  justify-content: center;
+  color: $primary-color-dark;
+  font-weight: 600;
+  font-size: 12px;
+  margin: 10px 0px;
+  text-transform: uppercase;
+}
+
+.message .bubble-container {
+  font-size: 14px;
+  display: flex;
+}
+
+.message.mine .bubble-container {
+  justify-content: flex-end;
+}
+
+.message.start .bubble-container .bubble {
+  border-top-left-radius: 20px;
+}
+
+.message.end .bubble-container .bubble {
+  border-bottom-left-radius: 20px;
+}
+
+.message.mine.start .bubble-container .bubble {
+  margin-top: 10px;
+  border-top-right-radius: 20px;
+}
+
+.message.mine.end .bubble-container .bubble {
+  border-bottom-right-radius: 20px;
+  margin-bottom: 10px;
+}
+
+.message .bubble-container .bubble {
+  margin: 1px 0px;
+  background: $snow-color;
+  padding: 3px 15px;
+  border-radius: 20px;
+  max-width: 75%;
+  border-top-left-radius: 2px;
+  border-bottom-left-radius: 2px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.message.mine .bubble-container .bubble {
+  background: $secondary-color;
+  color: $snow-color;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border-top-right-radius: 2px;
+  border-bottom-right-radius: 2px;
+}
+
+.bubble{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  .bubble-inner{
+    padding-left: 8px;
+    display: flex;
+    flex-direction: column;
+  }
+}

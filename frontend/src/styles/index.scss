@@ -1,0 +1,84 @@
+$font-stack:    Helvetica, Arial;
+$primary-color-dark: #4e4e4e;
+$primary-color-light: #931a25;
+$secondary-color: #ffcb8e;
+$snow-color: #f8f8f8;
+$content-width-ds: 1200px;
+$content-width-mb: 95%;
+$max-width-ds: 1220px;
+$max-width-xs: 500px;
+
+@import '../components/routes/connect/connect.scss';
+@import '../components/routes/main/main.scss';
+@import '../components/routes/main/message/message.scss';
+@import '../components/routes/main/input/input.scss';
+@import '../components/utils/autocomplete/_autocomplete.scss';
+
+body {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+  height: 100%;
+  font: 100% $font-stack;
+  color: $primary-color-dark;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  #root{
+    width: $content-width-ds;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  @media only screen and (max-width: $max-width-ds){
+    #root{
+      width: $content-width-mb;
+    }
+  }
+}
+
+div, a, h1, h2, h3, h4, h5, h6, form, input, textarea, body, span{
+  margin: 0px;
+  padding: 0px;
+}
+
+button{
+  border: none;
+  color: $primary-color-dark;
+  background-color: initial;
+  font-size: 16px;
+}
+
+input, button{
+  border: 1px solid $primary-color-dark;
+  border-radius: 4px;
+}
+
+input:hover, button:hover{
+  border: 1px solid $primary-color-light;
+}
+
+button:hover{
+  cursor: pointer;
+}
+
+.input-wrap{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 16px;
+  label{
+      font-size: 18px;
+      margin-bottom: 8px;
+  }
+  input{
+      width: 95%;
+      padding: 8px;
+      height: 20px;
+      color: $primary-color-dark;
+  }
+}

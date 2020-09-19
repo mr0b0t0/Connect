@@ -1,0 +1,35 @@
+.connect-wrap{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    form{
+        width: 400px;
+        display: flex;
+        flex-direction: column;
+        padding: 16px;
+        box-shadow: 0px 0px 12px #ccc;
+        border-radius: 4px;
+        align-items: center;
+        justify-content: center;
+        h3{
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        span{
+            min-height: 18px;
+            font-size: 16px;
+            color: $primary-color-light;
+        }
+        button{
+            width: 180px;
+            height: 40px;
+        }
+    }
+}
+@media only screen and (max-width: $max-width-xs){
+    .main-wrap{
+      width: 100%;
+    }
+}
